@@ -1,4 +1,4 @@
-#baekjoon 2839 설탕배달 python
+#baekjoon 2839 설탕배달 python3
 
 total = int(input())
 
@@ -11,5 +11,3 @@ while (n >= 0):
     n -= 1
 else:
   print(-1)
-
-#실행시간이 매우 길어보인다.
