@@ -3,15 +3,15 @@
 
 n = int(input())
 
-rope_type = []
+rope_types = []
 for i in range(n):
-  rope_type.append(int(input()))
+  rope_types.append(int(input()))
 
-rope_type.sort()
+rope_types.sort()
 
 weight = []
 for j in range(n):
-  w = rope_type[j]*(n-j)
+  w = rope_types[j]*(n-j)
   weight.append(w)
 
 print(max(weight))
