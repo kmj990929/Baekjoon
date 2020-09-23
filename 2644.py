@@ -1,5 +1,4 @@
 #baekjoon 2644 촌수계산 python3
-#실패 : BFS로 풀어보자!
 
 from collections import deque
 import sys
