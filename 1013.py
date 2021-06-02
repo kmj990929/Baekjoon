@@ -1,6 +1,8 @@
 #baekjoon 1013 contact python3
 
 # pattern = (100+1+ | 01)+
+# 조금 더 깔끔한 풀이를 생각해보자
+
 n = int(input())
 
 def match(target):
