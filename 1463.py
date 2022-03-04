@@ -1,23 +1,13 @@
 #baekjoon 1463 1로 만들기 python3
 
-
-from collections import deque
-
 n = int(input())
+dp_table = [0]*(n+1)
 
-queue = deque()
-queue.append((n,0))
-value = 0
-while queue:
-  v = queue.popleft()
-  if v[0] != 1:
-    if v[0] % 3 == 0:
-      queue.append((v[0]//3,v[1]+1))
-    if v[0] % 2 == 0:
-      queue.append((v[0]//2, v[1]+1))
-    queue.append((v[0]-1, v[1]+1))
-  else:
-    value = v[1]
-    break
+for i in range(2, n+1):
+  dp_table[i] = dp_table[i-1]+1
+  if i%2==0:
+    dp_table[i] = min(dp_table[i], dp_table[i//2]+1)
+  if i%3==0:
+    dp_table[i] = min(dp_table[i], dp_table[i//3]+1)
 
-print(value)
+print(dp_table[n])
